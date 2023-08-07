@@ -85,7 +85,7 @@ namespace Identity.API
                     });
             })
             .Services.AddTransient<IProfileService, ProfileService>();
-
+            services.Configure<AppSettings>(Configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity.API", Version = "v1" });

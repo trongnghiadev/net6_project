@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Identity.API.Database.Configuration;
 using Identity.API.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -18,6 +14,8 @@ namespace Identity.API.Database
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
+
+            base.OnModelCreating(builder);
         }
     }
 }
